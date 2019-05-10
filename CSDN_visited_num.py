@@ -7,10 +7,10 @@ import datetime
 import requests
 import re
 
-#输入博客地址、页数以及保存路径
+#输入博客地址、页数以及保存路径(默认同本文件相同路径)
 base_url = "https://blog.csdn.net/u013834525/"
 pages = 3
-record_file = "/home/night_fury/Desktop/CSDN_statistics.xls"
+record_file = os.path.dirname(os.path.realpath(__file__)) + "/CSDN_statistics.xls"
 
 
 def main():
