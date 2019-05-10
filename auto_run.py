@@ -14,11 +14,11 @@ def main():
     os.system("python3 " + current_path + "/CSDN_visited_num.py")
     if use_github:
         #得到当前日期
-        now_time = int(str(datetime.datetime.now().strftime('%Y%m%d')))
+        now_time = str(datetime.datetime.now().strftime('%Y%m%d'))
         # repo.index.add("-A")
         # repo.index.commit("update " + now_time)
         repo.git.add("-A")
-        repo.git.commit("-m", update " + now_time)
+        repo.git.commit("-m", "update" + now_time)
         repo.remote().push()
 
 if __name__ == "__main__":
